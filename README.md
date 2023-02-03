@@ -23,9 +23,8 @@ ytmous is licensed under BSD 3 Clause and it's code is free. You can also host y
 ![ytmous_desktop_watch.png](https://raw.githubusercontent.com/Yonle/ytmous/nightly/screenshots/ytmous_desktop_watch.png)
 
 ## Server Requirement
-- Node v10+ (Node v14 Recommended)
-- Git installed
-- Fast server network connection
+- Node v16+ is advised.
+- Fast server network connection with ability to reach YouTube
 
 ## Configuration
 The code is reading the provided configuration from Environment Variable that comes from your system. These variable is **optional**.
@@ -82,3 +81,15 @@ Endpoint to give information of an YouTube video.
 #### Parameters
 - `videoID` **(Required)**
   String of YouTube video ID
+
+### `/api/getComments/[videoID]`
+#### Parameters
+- `videoID` **(Required)**
+  String of YouTube video ID.
+
+#### Queries
+- `continuation` (String)
+  Continuation ID of an Comments. Used to fetch the next comment section.
+
+- `replyToken` (String)
+  Reply token. Used to view an reply of a comment.
