@@ -242,6 +242,7 @@ app.get("/w/:id", async (req, res) => {
     await putInfoToCache(info);
 
     res.render("watch.ejs", {
+      hostname: req.hostname,
       id: req.params.id,
       info,
       q: req.query,
